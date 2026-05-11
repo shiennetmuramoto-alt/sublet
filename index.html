@@ -44,16 +44,17 @@
   }
   .sticky-bar .logo { color: var(--teal); font-weight: 900; font-size: 14px; letter-spacing: .1em; }
   .sticky-bar a {
-    background: var(--teal); color: var(--white); font-weight: 900; font-size: 14px;
-    padding: 8px 24px; border-radius: 4px; text-decoration: none; letter-spacing: .05em;
-    transition: background .2s;
+    background: #06C755; color: var(--white); font-weight: 900; font-size: 14px;
+    padding: 8px 20px; border-radius: 6px; text-decoration: none; letter-spacing: .05em;
+    transition: background .2s; display: inline-flex; align-items: center; gap: 6px;
   }
-  .sticky-bar a:hover { background: var(--teal-light); }
+  .sticky-bar a:hover { background: #05b84d; }
 
   /* ─── HERO ─── */
   .hero {
     margin-top: 44px;
-    background: linear-gradient(135deg, #EEF8F6 0%, #E8F4FB 50%, #FEF9EE 100%);
+    background: linear-gradient(135deg, rgba(238,248,246,0.92) 0%, rgba(232,244,251,0.90) 50%, rgba(254,249,238,0.92) 100%),
+      url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1600&auto=format&fit=crop&q=80') center/cover no-repeat;
     min-height: 88vh;
     display: flex; flex-direction: column; align-items: center; justify-content: center;
     text-align: center; padding: 80px 24px 60px;
@@ -92,15 +93,20 @@
     max-width: 680px; margin: 0 auto 40px; line-height: 1.9;
   }
   .hero-sub strong { color: var(--teal); font-weight: 700; }
+  /* ─── LINE BUTTON ─── */
+  .line-btn-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .line-badge { font-size: 13px; color: rgba(255,255,255,.7); letter-spacing: .05em; }
+
   .hero-cta {
-    display: inline-block;
-    background: var(--teal); color: var(--white);
+    display: inline-flex; align-items: center; gap: 12px;
+    background: #06C755; color: var(--white);
     font-weight: 900; font-size: 20px; padding: 20px 56px;
-    border-radius: 4px; text-decoration: none; letter-spacing: .05em;
-    box-shadow: 0 4px 20px rgba(26,122,110,.3);
+    border-radius: 8px; text-decoration: none; letter-spacing: .05em;
+    box-shadow: 0 4px 20px rgba(6,199,85,.35);
     transition: all .2s; margin-bottom: 16px;
   }
-  .hero-cta:hover { background: var(--teal-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,122,110,.35); }
+  .hero-cta:hover { background: #05b84d; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(6,199,85,.4); }
+  .hero-cta .line-icon { width: 28px; height: 28px; flex-shrink: 0; }
   .hero-note { color: var(--text-muted); font-size: 12px; }
   .hero-nums {
     display: flex; gap: 40px; justify-content: center; margin-top: 52px;
@@ -389,14 +395,14 @@
     max-width: 560px; margin: 0 auto 40px; line-height: 1.9;
   }
   .cta-btn {
-    display: inline-block;
-    background: var(--teal-light); color: var(--white);
+    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+    background: #06C755; color: var(--white);
     font-weight: 900; font-size: 22px; padding: 24px 64px;
-    border-radius: 4px; text-decoration: none; letter-spacing: .05em;
-    box-shadow: 0 0 0 6px rgba(34,168,150,.25), 0 8px 32px rgba(34,168,150,.3);
+    border-radius: 8px; text-decoration: none; letter-spacing: .05em;
+    box-shadow: 0 0 0 6px rgba(6,199,85,.2), 0 8px 32px rgba(6,199,85,.35);
     transition: all .2s; margin-bottom: 20px;
   }
-  .cta-btn:hover { background: #28C4AE; transform: translateY(-3px); }
+  .cta-btn:hover { background: #05b84d; transform: translateY(-3px); }
   .cta-note { color: rgba(255,255,255,.45); font-size: 12px; line-height: 1.8; }
   .cta-checks {
     display: flex; justify-content: center; flex-wrap: wrap; gap: 16px 28px;
@@ -443,6 +449,8 @@
     .rev-arrow { transform: rotate(90deg); text-align: center; }
     .hero-divider { display: none; }
     .cta-btn { padding: 20px 36px; font-size: 18px; }
+    .solution-img-grid { grid-template-columns: 1fr !important; }
+    .solution-img-grid img { height: 180px !important; }
   }
 </style>
 </head>
@@ -451,7 +459,10 @@
 <!-- STICKY BAR -->
 <div class="sticky-bar">
   <div class="logo">■ SUBLEASE MANAGEMENT</div>
-  <a href="#cta">今すぐ無料相談する</a>
+  <a href="https://lin.ee/ZwO5A11" target="_blank" rel="noopener">
+    <svg width="16" height="16" viewBox="0 0 48 48" fill="white" style="flex-shrink:0;"><path d="M24 4C12.95 4 4 11.82 4 21.5c0 5.75 3.27 10.84 8.33 14.1-.37 1.37-1.33 4.97-1.53 5.74-.25.96.35 .94.74.68.31-.2 4.93-3.26 6.93-4.58.82.11 1.66.16 2.53.16 11.05 0 20-7.82 20-17.5S35.05 4 24 4z"/></svg>
+    LINEで無料相談する
+  </a>
 </div>
 
 <!-- ━━━━━━━━━━━━━━━━━━━━━━━━
@@ -468,8 +479,11 @@
     そんな物件でも<strong>一括・一部借上で安定収益</strong>に変えられます。<br>
     滞納ゼロ・空室ゼロ・管理も全部おまかせ。
   </p>
-  <a href="#cta" class="hero-cta">空室について、無料で相談する →</a>
-  <p class="hero-note">相談・査定 完全無料｜首都圏全域対応</p>
+  <a href="https://lin.ee/ZwO5A11" target="_blank" rel="noopener" class="hero-cta">
+    <svg class="line-icon" viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C12.95 4 4 11.82 4 21.5c0 5.75 3.27 10.84 8.33 14.1-.37 1.37-1.33 4.97-1.53 5.74-.25.96.35.94.74.68.31-.2 4.93-3.26 6.93-4.58.82.11 1.66.16 2.53.16 11.05 0 20-7.82 20-17.5S35.05 4 24 4z"/></svg>
+    公式LINEで無料相談する →
+  </a>
+  <p class="hero-note">「支援ネット総合窓口」| 相談・査定 完全無料｜首都圏全域対応</p>
   <div class="hero-nums">
     <div class="hero-num">
       <div class="n">0<span>件</span></div>
@@ -501,6 +515,11 @@
     <div class="section-label">あなたの悩み、当てはまりませんか？</div>
     <h2 class="sec-title">空室が埋まらない。<br><em>その理由は、募集方法にあります。</em></h2>
     <p class="lead">首都圏でも「条件が合わない」物件は、普通に募集しても決まりません。<br>家賃を下げれば採算が取れず、下げなければ空き続ける。この悪循環を断ち切る方法があります。</p>
+    <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.12); max-height: 280px;">
+      <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=1200&auto=format&fit=crop&q=80"
+        alt="空室のアパート"
+        style="width:100%; height:280px; object-fit:cover; display:block; filter: brightness(0.92) saturate(0.85);">
+    </div>
     <div class="pain-cards">
       <div class="pain-card">
         <div class="icon">🏚</div>
@@ -537,7 +556,15 @@
       その空室、今すぐ<em style="color:var(--gold-light)">収益物件</em>に変えられます。
       <span>サブリース（一括・一部借上）モデルで、リスクをすべて事業者が引き受けます</span>
     </div>
-    <p class="lead">私たちは住宅確保要配慮者（生活保護受給者など）への住まいを提供する事業者です。物件をオーナー様から一括・一部借上し、当社・関連団体が責任を持って運営・管理します。<br><br>
+    <div class="solution-img-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 32px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,.10);">
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80"
+        alt="不動産契約"
+        style="width:100%; height:220px; object-fit:cover; display:block;">
+      <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&auto=format&fit=crop&q=80"
+        alt="安定収益イメージ"
+        style="width:100%; height:220px; object-fit:cover; display:block;">
+    </div>
+    <p class="lead">私たちは住宅確保要配慮者（生活保護受給者など）への住まいを提供する事業者です。物件をオーナー様から一括・一部借上し、当社の関連団体が責任を持って運営・管理します。<br><br>
     オーナー様への賃料は<strong>当社から毎月確実にお支払い</strong>します。入居者の状況・空室の有無に関わらず支払いは継続されます。リフォーム・入居支援・トラブル対応・行政手続き、すべて私たちが担当します。</p>
   </div>
 </section>
@@ -549,6 +576,11 @@
   <div class="container">
     <div class="section-label" style="color:var(--teal); border-color:var(--teal);">オーナー様の4大メリット</div>
     <h2 class="sec-title">なぜ、このモデルが<em>選ばれるのか</em></h2>
+    <div style="margin-bottom: 36px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(26,122,110,.15);">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&auto=format&fit=crop&q=80"
+        alt="首都圏マンション・収益物件イメージ"
+        style="width:100%; height:240px; object-fit:cover; object-position:center 60%; display:block;">
+    </div>
     <div class="merit-list">
 
       <div class="merit-item">
@@ -582,7 +614,7 @@
         <div class="merit-num">④</div>
         <div class="merit-content">
           <h3>空室になっても、あなたの収入は止まらない。</h3>
-          <p>サブリース契約では、<strong style="color:var(--teal)">私たち（当社・関連団体）が物件を一括・一部で借り上げるため、実際に空室があってもオーナー様への賃料支払いは継続</strong>されます。空室リスクはすべて当社が負担。退去が出ても次の手配は当社が行います。オーナー様は何もしなくていい。それがサブリースの本質です。</p>
+          <p>サブリース契約では、<strong style="color:var(--teal)">当社の関連団体が物件を一括・一部で借り上げるため、実際に空室があってもオーナー様への賃料支払いは継続</strong>されます。空室リスクはすべて当社が負担。退去が出ても次の手配は当社が行います。オーナー様は何もしなくていい。それがサブリースの本質です。</p>
           <div class="tag">✓ 空室・退去リスク 当社が全額負担</div>
         </div>
       </div>
@@ -638,8 +670,8 @@
 <section class="revenue-section">
   <div class="container">
     <div class="section-label" style="color:var(--teal); border-color:var(--teal);">サブリースとは</div>
-    <h2 class="sec-title">当社・関連団体が借り上げる。<br><em>それだけです。</em></h2>
-    <p class="lead">サブリース（一括・一部借上）とは、当社・関連団体がオーナー様から物件を借り上げ、住宅確保要配慮者（生活保護受給者等）に転貸する仕組みです。<strong style="color:var(--teal)">オーナー様への賃料は当社からお支払いするため、入居者の状況に関わらず毎月確実に収入が発生します。</strong></p>
+    <h2 class="sec-title">当社の関連団体が借り上げる。<br><em>それだけです。</em></h2>
+    <p class="lead">サブリース（一括・一部借上）とは、当社の関連団体がオーナー様から物件を借り上げ、住宅確保要配慮者（生活保護受給者等）に転貸する仕組みです。<strong style="color:var(--teal)">オーナー様への賃料は当社からお支払いするため、入居者の状況に関わらず毎月確実に収入が発生します。</strong></p>
 
     <!-- 収益スキーム図 -->
     <div class="scheme-box">
@@ -696,7 +728,7 @@
       <div class="sublease-point">
         <div class="sp-icon">🔒</div>
         <h3>空室リスクは当社が負担</h3>
-        <p>当社・関連団体が一括・一部借上するため、実際に空室があってもオーナー様への賃料支払いは続きます。退去後の次の手配もすべて当社が対応します。</p>
+        <p>当社の関連団体が一括・一部借上するため、実際に空室があってもオーナー様への賃料支払いは続きます。退去後の次の手配もすべて当社が対応します。</p>
       </div>
       <div class="sublease-point">
         <div class="sp-icon">📋</div>
@@ -746,7 +778,7 @@
           <h3>孤独死が発生したら、どうなりますか？</h3>
         </div>
         <div class="faq-a">
-          事故物件になったとしても、<strong>当団体が借り続けます。</strong>万が一の際の初動対応・行政連絡・原状回復対応のすべても当団体が代行します。
+          事故物件になったとしても、<strong>当社の関連団体が借り続けます。</strong>万が一の際の初動対応・行政連絡・原状回復対応のすべても当社の関連団体が代行します。
         </div>
       </div>
 
@@ -782,6 +814,11 @@
     <div class="section-label" style="color:var(--teal); border-color:var(--teal);">社会的意義</div>
     <h2 class="sec-title">あなたの物件が、<em>誰かの「家」になる。</em></h2>
     <p class="lead">このモデルは、オーナー様の収益化と、住宅を必要とする人への支援を同時に実現します。「利益を得ながら社会貢献する」それが持続可能なモデルです。</p>
+    <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(26,122,110,.12);">
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop&q=80"
+        alt="住まいと人のつながり"
+        style="width:100%; height:260px; object-fit:cover; object-position:center 40%; display:block;">
+    </div>
     <div class="social-grid">
       <div class="social-card">
         <div class="icon">🏠</div>
@@ -816,9 +853,14 @@
       サブリース契約の詳細・賃料感・対応可否をご説明します。<br>
       首都圏エリアの物件オーナー様、まずはお気軽にご連絡ください。
     </p>
-    <a href="tel:0120-376-951" class="cta-btn">今すぐ無料相談する →</a>
+    <a href="https://lin.ee/ZwO5A11" target="_blank" rel="noopener" class="cta-btn">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C12.95 4 4 11.82 4 21.5c0 5.75 3.27 10.84 8.33 14.1-.37 1.37-1.33 4.97-1.53 5.74-.25.96.35.94.74.68.31-.2 4.93-3.26 6.93-4.58.82.11 1.66.16 2.53.16 11.05 0 20-7.82 20-17.5S35.05 4 24 4z"/></svg>
+      公式LINEで無料相談する →
+    </a>
     <div style="margin-bottom:20px;">
-      <a href="mailto:info@example.com" style="color:var(--teal-light); font-size:15px; font-weight:700;">📧 メールで問い合わせる</a>
+      <a href="https://lin.ee/ZwO5A11" target="_blank" rel="noopener" style="color:#06C755; font-size:15px; font-weight:700; text-decoration:none;">
+        💬 公式LINE「支援ネット総合窓口」を開く
+      </a>
     </div>
     <div class="cta-checks">
       <span class="cta-check">相談・査定 完全無料</span>
@@ -852,8 +894,8 @@
           <td>〒339-0061　埼玉県さいたま市岩槻区岩槻5396-4</td>
         </tr>
         <tr>
-          <th>電話番号</th>
-          <td><a href="tel:0120-376-951">0120-376-951</a></td>
+          <th>お問い合わせ</th>
+          <td><a href="https://lin.ee/ZwO5A11" target="_blank" rel="noopener" style="color:#06C755; font-weight:700;">公式LINE「支援ネット総合窓口」</a></td>
         </tr>
       </table>
     </div>
@@ -863,7 +905,8 @@
 <!-- FOOTER -->
 <footer>
   <p>© 2025 NPO法人 生活支援ネット</p>
-  <p style="margin-top:8px;">〒339-0061　埼玉県さいたま市岩槻区岩槻5396-4　TEL: 0120-376-951</p>
+  <p style="margin-top:8px;">〒339-0061　埼玉県さいたま市岩槻区岩槻5396-4</p>
+  <p style="margin-top:8px;"><a href="https://lin.ee/ZwO5A11" target="_blank" rel="noopener" style="color:#06C755; font-weight:700;">📲 公式LINE「支援ネット総合窓口」でお問い合わせ</a></p>
   <p style="margin-top:8px;font-size:11px;opacity:.6;">サブリース契約はオーナー様に不利になる場合があります。契約前に必ず内容をご確認ください（サブリース新法に基づく説明を行います）。</p>
 </footer>
 
