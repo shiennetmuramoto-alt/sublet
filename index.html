@@ -405,6 +405,29 @@
   .cta-check { color: rgba(255,255,255,.85); font-size: 14px; }
   .cta-check::before { content: '✓ '; color: var(--teal-light); font-weight: 700; }
 
+  /* ─── COMPANY ─── */
+  .company-section { background: var(--bg-light); }
+  .company-box {
+    margin-top: 32px; background: var(--white);
+    border: 1px solid rgba(26,122,110,.15); border-radius: 10px;
+    overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,.06);
+  }
+  .company-table { width: 100%; border-collapse: collapse; }
+  .company-table tr { border-bottom: 1px solid rgba(0,0,0,.07); }
+  .company-table tr:last-child { border-bottom: none; }
+  .company-table th {
+    width: 140px; padding: 18px 24px;
+    background: var(--teal-pale); color: var(--teal);
+    font-size: 13px; font-weight: 700; text-align: left;
+    vertical-align: top; white-space: nowrap;
+  }
+  .company-table td {
+    padding: 18px 24px; color: var(--text-main);
+    font-size: 15px; line-height: 1.7;
+  }
+  .company-table td a { color: var(--teal); font-weight: 700; text-decoration: none; }
+  .company-table td a:hover { text-decoration: underline; }
+
   /* ─── FOOTER ─── */
   footer {
     background: var(--dark); border-top: 3px solid var(--teal);
@@ -438,7 +461,7 @@
   <div class="hero-badge">首都圏限定｜サブリース（一括・一部借上）契約募集中</div>
   <h1>
     その空室、<br>もう悩まなくていい。
-    <em>家賃は行政が払う。</em>
+    <em>家賃は行政が負担。</em>
   </h1>
   <p class="hero-sub">
     築古・空室率50%超・家賃を下げても決まらない――<br>
@@ -514,7 +537,7 @@
       その空室、今すぐ<em style="color:var(--gold-light)">収益物件</em>に変えられます。
       <span>サブリース（一括・一部借上）モデルで、リスクをすべて事業者が引き受けます</span>
     </div>
-    <p class="lead">私たちは住宅確保要配慮者（生活保護受給者など）への住まいを提供する事業者です。物件をオーナー様から一括・一部借上し、当社が責任を持って運営・管理します。<br><br>
+    <p class="lead">私たちは住宅確保要配慮者（生活保護受給者など）への住まいを提供する事業者です。物件をオーナー様から一括・一部借上し、当社・関連団体が責任を持って運営・管理します。<br><br>
     オーナー様への賃料は<strong>当社から毎月確実にお支払い</strong>します。入居者の状況・空室の有無に関わらず支払いは継続されます。リフォーム・入居支援・トラブル対応・行政手続き、すべて私たちが担当します。</p>
   </div>
 </section>
@@ -559,7 +582,7 @@
         <div class="merit-num">④</div>
         <div class="merit-content">
           <h3>空室になっても、あなたの収入は止まらない。</h3>
-          <p>サブリース契約では、<strong style="color:var(--teal)">私たちが物件を一括・一部で借り上げるため、実際に空室があってもオーナー様への賃料支払いは継続</strong>されます。空室リスクはすべて当社が負担。退去が出ても次の手配は当社が行います。オーナー様は何もしなくていい。それがサブリースの本質です。</p>
+          <p>サブリース契約では、<strong style="color:var(--teal)">私たち（当社・関連団体）が物件を一括・一部で借り上げるため、実際に空室があってもオーナー様への賃料支払いは継続</strong>されます。空室リスクはすべて当社が負担。退去が出ても次の手配は当社が行います。オーナー様は何もしなくていい。それがサブリースの本質です。</p>
           <div class="tag">✓ 空室・退去リスク 当社が全額負担</div>
         </div>
       </div>
@@ -615,8 +638,8 @@
 <section class="revenue-section">
   <div class="container">
     <div class="section-label" style="color:var(--teal); border-color:var(--teal);">サブリースとは</div>
-    <h2 class="sec-title">当社が丸ごと借り上げる。<br><em>それだけです。</em></h2>
-    <p class="lead">サブリース（一括・一部借上）とは、当社がオーナー様から物件を借り上げ、住宅確保要配慮者（生活保護受給者等）に転貸する仕組みです。<strong style="color:var(--teal)">オーナー様への賃料は当社からお支払いするため、入居者の状況に関わらず毎月確実に収入が発生します。</strong></p>
+    <h2 class="sec-title">当社・関連団体が借り上げる。<br><em>それだけです。</em></h2>
+    <p class="lead">サブリース（一括・一部借上）とは、当社・関連団体がオーナー様から物件を借り上げ、住宅確保要配慮者（生活保護受給者等）に転貸する仕組みです。<strong style="color:var(--teal)">オーナー様への賃料は当社からお支払いするため、入居者の状況に関わらず毎月確実に収入が発生します。</strong></p>
 
     <!-- 収益スキーム図 -->
     <div class="scheme-box">
@@ -673,7 +696,7 @@
       <div class="sublease-point">
         <div class="sp-icon">🔒</div>
         <h3>空室リスクは当社が負担</h3>
-        <p>当社が一括・一部借上するため、実際に空室があってもオーナー様への賃料支払いは続きます。退去後の次の手配もすべて当社が対応します。</p>
+        <p>当社・関連団体が一括・一部借上するため、実際に空室があってもオーナー様への賃料支払いは続きます。退去後の次の手配もすべて当社が対応します。</p>
       </div>
       <div class="sublease-point">
         <div class="sp-icon">📋</div>
@@ -723,7 +746,7 @@
           <h3>孤独死が発生したら、どうなりますか？</h3>
         </div>
         <div class="faq-a">
-          定期的な安否確認を当社スタッフが実施します。万が一の際も、<strong>初動対応・行政連絡・原状回復対応のすべてを当社が代行します。</strong>また、当社の契約には残置物処理・特殊清掃費用への対応が含まれており、オーナー様への金銭的負担を最小化する体制を整えています。
+          事故物件になったとしても、<strong>当団体が借り続けます。</strong>万が一の際の初動対応・行政連絡・原状回復対応のすべても当団体が代行します。
         </div>
       </div>
 
@@ -793,7 +816,7 @@
       サブリース契約の詳細・賃料感・対応可否をご説明します。<br>
       首都圏エリアの物件オーナー様、まずはお気軽にご連絡ください。
     </p>
-    <a href="tel:0120-000-000" class="cta-btn">今すぐ無料相談する →</a>
+    <a href="tel:0120-376-951" class="cta-btn">今すぐ無料相談する →</a>
     <div style="margin-bottom:20px;">
       <a href="mailto:info@example.com" style="color:var(--teal-light); font-size:15px; font-weight:700;">📧 メールで問い合わせる</a>
     </div>
@@ -811,11 +834,37 @@
   </div>
 </section>
 
+<!-- ━━━━━━━━━━━━━━━━━━━━━━━━
+  10. COMPANY 運営会社
+━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="company-section">
+  <div class="container">
+    <div class="section-label" style="color:var(--teal); border-color:var(--teal);">運営会社</div>
+    <h2 class="sec-title">運営団体について</h2>
+    <div class="company-box">
+      <table class="company-table">
+        <tr>
+          <th>団体名</th>
+          <td>NPO法人　生活支援ネット</td>
+        </tr>
+        <tr>
+          <th>所在地</th>
+          <td>〒339-0061　埼玉県さいたま市岩槻区岩槻5396-4</td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td><a href="tel:0120-376-951">0120-376-951</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 株式会社〇〇〇〇　|　宅地建物取引業者　知事（〇）第〇〇〇〇号</p>
-  <p style="margin-top:8px;">〒〇〇〇-〇〇〇〇　東京都〇〇区〇〇〇〇〇</p>
-  <p style="margin-top:8px;font-size:11px;opacity:.6;">本ページに記載の賃料・収益額はあくまでも事例・目安であり、実際の金額を保証するものではありません。<br>サブリース契約はオーナー様に不利になる場合があります。契約前に必ず内容をご確認ください（サブリース新法に基づく説明を行います）。</p>
+  <p>© 2025 NPO法人 生活支援ネット</p>
+  <p style="margin-top:8px;">〒339-0061　埼玉県さいたま市岩槻区岩槻5396-4　TEL: 0120-376-951</p>
+  <p style="margin-top:8px;font-size:11px;opacity:.6;">サブリース契約はオーナー様に不利になる場合があります。契約前に必ず内容をご確認ください（サブリース新法に基づく説明を行います）。</p>
 </footer>
 
 </body>
